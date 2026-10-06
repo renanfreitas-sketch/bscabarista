@@ -196,6 +196,28 @@ footer a{color:var(--yellow)}
 @media (max-width:480px){.brand-txt{max-width:190px}}
 .brand-txt{max-width:250px}
 @media (min-width:1001px){.nav ul{gap:18px;font-size:13px}}
+/* hero fit: sizes follow each column's own width */
+.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.hero-title{container-type:inline-size;min-width:0}
+.hero-art{container-type:inline-size;min-width:0}
+.slab.l1{font-size:min(76px,10.6cqi)}
+.slab.l2{font-size:min(63px,8.9cqi)}
+.slab.l3{font-size:min(120px,15.2cqi)}
+.lrow{margin-left:min(60px,5cqi)}
+.lrow .slab.yr,.lrow .slab.l4{font-size:min(72px,9.6cqi)}
+.date-card{max-width:100%;margin-right:0}
+.date-card .t{font-size:min(30px,6.2cqi);white-space:nowrap}
+.date-card .d{font-size:min(50px,9.4cqi)}
+.countdown{white-space:nowrap}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .hero-title{width:100%;max-width:620px}
+  .h1{align-items:center}.lrow{margin-left:0}.tagline{margin-inline:auto}
+  .hero-art{width:100%;max-width:520px;align-items:center;min-height:clamp(300px,80vw,420px)}
+  .date-card{align-items:center}
+  .holo{right:auto;left:50%;translate:-50% 0}
+  .seal{margin-right:0}
+}
 </style>
 
 </head>
@@ -217,7 +239,7 @@ footer a{color:var(--yellow)}
   <div class="band in" role="presentation"></div>
   <div class="hero tex">
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-title">
         <h1 class="h1" aria-label="Campeonato Brasileiro de Barista 2027 na SIC">
           <span class="slab l1" aria-hidden="true">Campeonato</span>
           <span class="slab l2" aria-hidden="true">Brasileiro de</span>
